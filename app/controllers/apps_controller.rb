@@ -15,12 +15,25 @@ class AppsController < ApplicationController
     @app = App.new(app_parameters)
     @app.user_id = current_user.id
     @app.save
+
+    if @app.save
+      redirect_to compare_path(@app)
+    else
+      render 'new'
+    end
   end
 
   def edit
+    @app = App.find(params[:id])
   end
 
   def update
+    @app = App.find(params[:id])
+   if @app.update(app_parameters)
+     redirect_to @app
+   else
+     render 'edit'
+   end
   end
 
   def delete

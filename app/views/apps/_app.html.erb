@@ -16,3 +16,10 @@
 <p>
   <%= @app.user.email %>
 </p>
+
+<% if user_signed_in? %>
+  <% if @app.user_id === current_user.id %>
+    <%= link_to "Edit this App", edit_app_path(@app) %>
+    <%= link_to "Delete this App", app_path(@app), method: :delete, data: {confirm: "Are you sure?"}%>
+  <% end %>
+<%end%>
