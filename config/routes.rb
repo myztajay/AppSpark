@@ -1,15 +1,6 @@
 Rails.application.routes.draw do
-  get 'apps/index'
 
-  get 'apps/show'
-
-  get 'apps/create'
-
-  get 'apps/edit'
-
-  get 'apps/update'
-
-  get 'apps/delete'
+  resources :apps
 
   devise_for :users
   root 'pages#index'
