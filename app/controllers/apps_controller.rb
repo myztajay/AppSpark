@@ -17,7 +17,7 @@ class AppsController < ApplicationController
     @app.save
 
     if @app.save
-      redirect_to compare_path(@app)
+      redirect_to app_path(@app)
     else
       render 'new'
     end
