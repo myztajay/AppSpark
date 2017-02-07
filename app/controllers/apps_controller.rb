@@ -1,8 +1,10 @@
 class AppsController < ApplicationController
   def index
+    
   end
 
   def show
+
   end
 
   def new
@@ -10,6 +12,9 @@ class AppsController < ApplicationController
   end
 
   def create
+    @app = App.new(app_parameters)
+    @app.user_id = current_user.id
+    @app.save
   end
 
   def edit
@@ -19,5 +24,11 @@ class AppsController < ApplicationController
   end
 
   def delete
+  end
+
+
+  private
+  def app_parameters
+    params.require(:app).permit(:name, :description, :requirements, :developers_needed)
   end
 end
