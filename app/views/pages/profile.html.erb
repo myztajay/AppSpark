@@ -1,2 +1,14 @@
-<h1>User Profile</h1>
-<p>Find me in app/views/pages/profile.html.erb</p>
+<h1><%=@user.email%> Profile</h1>
+
+<select name="skill[skill]">
+  <option value="">Please select</option>
+  <option value="CSS" selected="selected">CSS</option>
+  <option value="HTML">HTML</option>
+  <option value="JAVASCRIPT">JAVASCRIPT</option>
+</select>
+
+<button type="button" name="button">Add Skills</button>
+<h2> SKILLS </h2>
+<% @skills.each do |x| %>
+<h3><%= x.skill%></h3>
+<% end %>
