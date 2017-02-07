@@ -1,0 +1,23 @@
+<% @apps.each do |app| %>
+<h1><%= app.name %> </h1>
+
+<h2>description</h2><p>
+  <%= app.description %>
+</p>
+
+<h2>Requirements </h2><p>
+  <%= app.requirements %>
+</p>
+
+<h2>Developers Needed</h2><p>
+  <%=app.developers_needed %>
+</p>
+
+<h3>Created by </h3>
+<p>
+  <%= app.user.email %>
+</p>
+
+-------------------------------
+
+<%end%>
