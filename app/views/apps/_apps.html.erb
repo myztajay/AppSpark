@@ -1,5 +1,5 @@
 <% @apps.each do |app| %>
-<h1><%= app.name %> </h1>
+<h1><%= link_to app.name, app_path(app) %> </h1>
 
 <h2>description</h2><p>
   <%= app.description %>
@@ -18,6 +18,6 @@
   <%= app.user.email %>
 </p>
 
--------------------------------
+---------------------------------------------------------------
 
 <%end%>
