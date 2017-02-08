@@ -19,8 +19,16 @@
       <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
     <% end %>
 
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+      <%if notice %>
+      <div class="alert alert-success" role="alert"><%= notice %></div>
+
+      <%elsif alert %>
+      <div class="alert alert-danger" role="alert"><%= alert %></div>
+
+      <% end %>
+
+    <div class="container">
     <%= yield %>
+    </div>
   </body>
 </html>
