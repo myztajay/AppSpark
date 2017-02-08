@@ -1,0 +1,9 @@
+alert("works");
+<%#=skills = @skills.map do |skill|
+  skill.skill
+  %>
+$(function(){
+
+  $("#skills_container").append(
+    "<h3><%=@skill%></h3>")
+})

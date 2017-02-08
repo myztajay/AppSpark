@@ -1,9 +1,11 @@
-<h1><%=@user.email%> Profile</h1>
+<h1><%=current_user.email%> Profile</h1>
 
 <%= render "./userskills/dropdown" %>
 
-
 <h2> SKILLS </h2>
-<% @skills.each do |x| %>
+<% current_user.skills.each do |x| %>
 <h3><%= x.skill%></h3>
 <% end %>
+<div id="skills_container">
+
+</div>

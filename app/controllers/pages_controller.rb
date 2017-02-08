@@ -3,9 +3,9 @@ class PagesController < ApplicationController
   end
 
   def profile
-    @user = current_user
-    @skills = @user.skills
-    @userskill = Userskill.new
+    #@user = current_user
+    #@skills = @user.skills
+    #@userskill = current_user.userskills.build
   end
 
   def show
