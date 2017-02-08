@@ -5,7 +5,6 @@ class UserskillsController < ApplicationController
     respond_to do |format|
       @userskill = Userskill.new(userskill_parameters)
       @userskill.user = current_user
-
       @skills = current_user.skills
       @skill = @userskill.skill.skill
       if @userskill.save
