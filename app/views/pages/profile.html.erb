@@ -1,11 +1,6 @@
 <h1><%=@user.email%> Profile</h1>
 
-<select name="skill[skill]">
-  <option value="">Please select</option>
-  <option value="CSS" selected="selected">CSS</option>
-  <option value="HTML">HTML</option>
-  <option value="JAVASCRIPT">JAVASCRIPT</option>
-</select>
+<%= render "./skills/dropdown" %>
 
 <button type="button" name="button">Add Skills</button>
 <h2> SKILLS </h2>

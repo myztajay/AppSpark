@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'skills/create'
+
+  get 'skills/destroy'
+
   resources :apps
 
   devise_for :users
