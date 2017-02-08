@@ -1,11 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'userskills/new'
+
+  get 'userskills/create'
+
+  get 'userskills/destroy'
+
   get 'skills/create'
 
   get 'skills/destroy'
 
   resources :apps
-
+  resources :userskills
   devise_for :users
   root 'apps#index'
 

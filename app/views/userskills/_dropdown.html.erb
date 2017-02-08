@@ -1,0 +1,5 @@
+<%= form_for @userskill do |f| %>
+ <%= f.collection_select :skill_id, Skill.order(:skill),:id,:skill %>
+ <%= f.submit %>
+
+ <% end %>
