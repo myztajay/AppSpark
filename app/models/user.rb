@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :userskills
   has_many :skills, through: :userskills
+  has_many :commitments
+  has_many :apps, through: :commitments
 end

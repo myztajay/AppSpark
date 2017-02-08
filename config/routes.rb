@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
+  get 'commitments/create'
+
+  get 'commitments/destroy'
+
   resources :apps
   resources :userskills, only: [:create, :destroy]
+  resources :commitments, only: [:create, :destroy]
   devise_for :users
   root 'apps#index'
 
