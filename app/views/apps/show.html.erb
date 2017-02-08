@@ -1,2 +1,11 @@
 <%= render 'app' %>
-<%= render './commitments/commitment' %>
+
+<h2> COMMITMENTS </h2>
+<% @app.commitments.each do |x| %>
+<p><%= x.user.email%></p>
+<% end %>
+
+<div id="commitment_container">
+</div>
+
+<%= render './commitments/commitment_button' %>
