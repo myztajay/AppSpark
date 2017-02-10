@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   end
 
   def profile
-    #@user = current_user
+    # @user = current_user
     #@skills = @user.skills
     #@userskill = current_user.userskills.build
   end

@@ -4,6 +4,8 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+# font awesome
+gem "font-awesome-rails"
 # for bootsrap framework
 gem 'bootstrap-sass'
 # for user auth

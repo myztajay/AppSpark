@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'apps#index'
 
+
   get 'pages/profile'
 
   get 'pages/show'

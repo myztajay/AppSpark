@@ -17,9 +17,9 @@
         <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
         <li><%= link_to 'APPS',apps_path %></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.email %> <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.email %> <i class="fa fa-cog fa-1x" aria-hidden="true"></i></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
+            <li><%= link_to "Profile", pages_profile_path(current_user)%></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>
