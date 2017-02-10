@@ -1,23 +1,29 @@
 <% @apps.each do |app| %>
-<h1><%= link_to app.name, app_path(app) %> </h1>
 
-<h2>description</h2><p>
-  <%= app.description %>
-</p>
+<div class="panel panel-default app_width">
+  <div class="panel-heading">
+    <h1 class="panel-title"><%= link_to app.name, app_path(app) %> </h1>
+  </div>
+  <div class="panel-body">
 
-<h2>Requirements </h2><p>
-  <%= app.requirements %>
-</p>
 
-<h2>Developers Needed</h2><p>
-  <%=app.developers_needed %>
-</p>
+  <h2>description</h2><p>
+    <%= app.description %>
+  </p>
 
-<h3>Created by </h3>
-<p>
-  <%= app.user.email %>
-</p>
+  <h2>Requirements </h2><p>
+    <%= app.requirements %>
+  </p>
 
----------------------------------------------------------------
+  <h2>Developers Needed</h2><p>
+    <%=app.developers_needed %>
+  </p>
+
+  <h3>Created by </h3>
+  <p>
+    <%= app.user.email %>
+  </p>
+</div>
+</div>
 
 <%end%>
