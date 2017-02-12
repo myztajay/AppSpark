@@ -19,6 +19,11 @@
     <%=app.developers_needed %>
   </p>
 
+  <h2>Tags</h2>
+    <%app.tag_list.each do |x| %>
+  <%= link_to x, tag_path(x) %>
+    <%end%>
+
   <h3>Created by </h3>
   <p>
     <%=link_to app.user.email, user_path(app.user) %>

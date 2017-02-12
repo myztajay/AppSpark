@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  get 'tags/:tag', to: 'apps#index', as: :tag
   get 'commitments/create'
   get 'commitments/destroy'
 

@@ -1,11 +1,15 @@
 class AppsController < ApplicationController
   def index
-    @apps = App.all
+    if params[:tag]
+      @apps = App.tagged_with(params[:tag])
+    else
+      @apps = App.all
+    end
   end
 
   def show
     @app = App.find(params[:id])
-    
+
   end
 
   def new
@@ -46,6 +50,6 @@ class AppsController < ApplicationController
 
   private
   def app_parameters
-    params.require(:app).permit(:name, :description, :requirements, :developers_needed)
+    params.require(:app).permit(:name, :description, :requirements, :developers_needed, :tag_list)
   end
 end
