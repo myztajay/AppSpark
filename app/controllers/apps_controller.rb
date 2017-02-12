@@ -2,6 +2,9 @@ class AppsController < ApplicationController
   def index
     if params[:tag]
       @apps = App.tagged_with(params[:tag])
+    elsif params[:search]
+      @apps = App.where('name LIKE ?', "%#{params[:search]}%")
+
     else
       @apps = App.all
     end
