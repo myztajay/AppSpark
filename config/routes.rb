@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
-  get 'users/show'
+
   get 'commitments/create'
   get 'commitments/destroy'
 
   resources :apps
   resources :userskills, only: [:create, :destroy]
   resources :commitments, only: [:create, :destroy]
-  resources :users, only: [:show]
   devise_for :users
+  resources :users, only: [:show]
+
   root 'apps#index'
 
   get 'pages/profile'

@@ -21,7 +21,7 @@
 
   <h3>Created by </h3>
   <p>
-    <%= app.user.email %>
+    <%=link_to app.user.email, user_path(app.user) %>
   </p>
 </div>
 </div>
