@@ -9,12 +9,18 @@
 </p>
 
 <h2>Developers Needed</h2><p>
-  <%=@app.developers_needed %>
+  <%=@app.developers_needed %> developers needed
+  <div class="progress">
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: <%= @app.commitments.count*100/@app.developers_needed*100/100%>%">
+    <%= @app.commitments.count*100/@app.developers_needed*100/100%>%
+    <span class="sr-only">40% Complete (success)</span>
+  </div>
+</div>
 </p>
 
 <h3>Created by </h3>
 <p>
-  <%= @app.user.email %>
+  <%= link_to @app.user.email, user_path(@app.user.id) %>
 </p>
 
 <% if user_signed_in? %>

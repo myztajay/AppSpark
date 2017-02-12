@@ -1,3 +1,35 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-<%= @user.email %>
+<div class="panel panel-default app_width">
+    <div class="panel-heading">
+        <h1 class="panel-title">
+            <h1><%=current_user.email%>'s Profile</h1>
+        </h1>
+    </div>
+    <div class="panel-body">
+
+        <%= render "./userskills/dropdown" %>
+
+        <h2>
+            SKILLS
+        </h2>
+        <% current_user.skills.each do |x| %>
+        <h3><%= x.skill%></h3>
+        <% end %>
+        <div id="skills_container"></div>
+    </div>
+</div>
+
+<div class="panel panel-default app_width">
+    <div class="panel-heading">
+        <h1 class="panel-title">
+            <h1>Commitments</h1>
+        </h1>
+    </div>
+    <div class="panel-body">
+      <ul>
+
+      <% @user.commitments.each do |x| %>
+        <li> <%=link_to x.app.name, app_path(x.app_id) %></li>
+        <%end %>
+      </ul>
+    </div>
+</div>

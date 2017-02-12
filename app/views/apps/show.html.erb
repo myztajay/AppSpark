@@ -2,7 +2,7 @@
 
 <h2> COMMITMENTS </h2>
 <% @app.commitments.each do |x| %>
-<p><%= x.user.email%></p>
+<p><%=link_to x.user.email, user_path(x.user.id)%></p>
 <% end %>
 
 <div id="commitment_container">
