@@ -9,4 +9,5 @@ class User < ApplicationRecord
   has_many :commitments
   has_many :apps, through: :commitments
   attachment :image
+
 end
