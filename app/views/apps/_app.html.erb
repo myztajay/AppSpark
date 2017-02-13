@@ -11,7 +11,9 @@
 </div>
 
 <div class="img_container">
-  <img src="https://images6.alphacoders.com/648/648005.png"  />
+  <% if @app.image %>
+  <%= image_tag attachment_url(@app, :image, :fill, 700, 380) %>
+  <%end%>
 </div>
 <div class="app_details">
 

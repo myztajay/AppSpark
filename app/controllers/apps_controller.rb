@@ -11,7 +11,7 @@ class AppsController < ApplicationController
 
   def show
     @app = App.find(params[:id])
-    
+
     # if params[:link_title]
     #   @link=params[:link_title]
     # end
@@ -55,6 +55,6 @@ class AppsController < ApplicationController
 
   private
   def app_parameters
-    params.require(:app).permit(:name, :description, :requirements, :developers_needed, :tag_list,:image)
+    params.require(:app).permit(:name, :description, :requirements, :developers_needed, :tag_list,:image,:remove_image)
   end
 end
