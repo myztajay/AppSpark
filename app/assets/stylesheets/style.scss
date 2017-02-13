@@ -8,6 +8,39 @@ body{
   align-items: stretch;
   flex-wrap: wrap;
 }
+.app_show_container{
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+.creator_container{
+  flex: 1 0 30%;
+}
+.title_container{
+  flex: 1 0 60%;
+}
+.img_container{
+  flex: 1 0 60%;
+}
+.img_container>img{
+  max-width: 100%
+}
+.app_details{
+  flex: 1 0 30%;
+}
+.mini_nav_container{
+  flex: 1 0 90%;
+  text-align: center;
+}
+
+.commiters_container{
+  flex: 1 0 100%;
+}
+
+overview_container{
+  flex: 1 0 100%;
+}
 
 .center-text{
   text-align: center;
@@ -20,5 +53,4 @@ body{
 .app_width{
   max-width: 321px;
   min-width: 320px;
-
 }

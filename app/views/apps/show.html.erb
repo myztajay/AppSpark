@@ -1,11 +1,4 @@
+<div class=app_show_container>
 <%= render 'app' %>
-
-<h2> COMMITMENTS </h2>
-<% @app.commitments.each do |x| %>
-<p><%=link_to x.user.email, user_path(x.user.id)%></p>
-<% end %>
-
-<div id="commitment_container">
+<%= render './commitments/commitments' %>
 </div>
-
-<%= render './commitments/commitment_button' %>

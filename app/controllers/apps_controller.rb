@@ -12,7 +12,11 @@ class AppsController < ApplicationController
 
   def show
     @app = App.find(params[:id])
+    if params[:link_title]
+      @link=params[:link_title]
 
+
+    end
   end
 
   def new
