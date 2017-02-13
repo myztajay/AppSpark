@@ -35,8 +35,17 @@ body{
 }
 
 .commiters_container{
-  flex: 1 0 100%;
+  flex: 1 0 30%;
 }
+.git_container{
+  flex: 1 0 60%;
+  text-align: center;
+}
+.comments_container{
+  flex: 1 0 100%;
+  text-align: center;
+}
+
 
 overview_container{
   flex: 1 0 100%;
