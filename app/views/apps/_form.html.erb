@@ -13,6 +13,14 @@
 <%= f.label :description%>
 <%= f.text_field :description%>
 
+<%= f.label :image%>
+<%= f.attachment_field :image%>
+<% if @app.image %>
+<%= image_tag attachment_url(@app, :image, :fill, 100, 100) %>
+<%end%>
+
+<%= f.check_box :remove_image %>
+<%= f.label :remove_image %>
 
 <%= f.label :tag_list, ("Tags seperated with commas")%>
 <%= f.text_field :tag_list%>

@@ -1,16 +1,7 @@
-<div class="commiters_container">
 
-<div><h2> COMMITMENTS </h2>
-<% @app.commitments.each do |x| %>
-<p><%=link_to x.user.email, user_path(x.user.id)%></p>
-<% end %>
 
-<div id="commitment_container">
-</div>
-</div>
 
 <%= form_for Commitment.new, remote: true do |f| %>
-<%= f.submit "Commit" %>
-<%= f.hidden_field :app_id, :value => params[:id]%>
-<% end %>
-</div>
+ <%= f.submit "Commit" %>
+ <%= f.hidden_field :app_id, :value => params[:id]%>
+ <% end %>

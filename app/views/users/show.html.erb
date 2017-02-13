@@ -1,13 +1,25 @@
-<div class="panel panel-default app_width">
+<div class="user_container">
+  <div class="panel panel-default app_width">
     <div class="panel-heading">
         <h1 class="panel-title">
-            <h1><%=current_user.email%>'s Profile</h1>
+            <h1><%=@user.email%>'s Profile</h1>
+            <% if current_user.image %>
+              <%= image_tag attachment_url(current_user, :image, :fill, 280, 280) %>
+            <%end%>
+
+            <%if @user == current_user%>
+              <%= form_for current_user do |f| %>
+                <%= f.label :image%>
+                <%= f.attachment_field :image%>
+                <%= f.check_box :remove_image %>
+                <%= f.label :remove_image %>
+                <%= f.submit %>
+              <%end%>
+            <%end%>
         </h1>
     </div>
     <div class="panel-body">
-
         <%= render "./userskills/dropdown" %>
-
         <h2>
             SKILLS
         </h2>
@@ -32,4 +44,5 @@
         <%end %>
       </ul>
     </div>
+</div>
 </div>
