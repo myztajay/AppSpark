@@ -11,7 +11,7 @@ class AppsController < ApplicationController
 
   def show
     @app = App.find(params[:id])
-    byebug
+    
     # if params[:link_title]
     #   @link=params[:link_title]
     # end
