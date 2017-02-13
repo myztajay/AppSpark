@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'users/show'
+
+  get 'users/update'
+
   get 'tags/:tag', to: 'apps#index', as: :tag
   get 'commitments/create'
   get 'commitments/destroy'
@@ -7,7 +11,7 @@ Rails.application.routes.draw do
   resources :userskills, only: [:create, :destroy]
   resources :commitments, only: [:create, :destroy]
   devise_for :users
-  resources :users, only: [:show]
+  resources :users, only: [:show, :update]
 
   root 'apps#index'
 

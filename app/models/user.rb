@@ -8,4 +8,5 @@ class User < ApplicationRecord
   has_many :skills, through: :userskills
   has_many :commitments
   has_many :apps, through: :commitments
+  attachment :image
 end
