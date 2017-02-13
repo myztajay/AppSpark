@@ -1,0 +1,6 @@
+
+
+<%= form_for Commitment.new, remote: true do |f| %>
+ <%= f.submit "Commit" %>
+ <%= f.hidden_field :app_id, :value => params[:id]%>
+ <% end %>
