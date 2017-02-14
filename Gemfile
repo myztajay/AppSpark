@@ -10,7 +10,10 @@ gem 'refile-mini_magick', github: 'refile/refile-mini_magick'
 gem 'sinatra', github: 'sinatra/sinatra', branch: 'master'
 # gem 'omniauth'
 gem 'omniauth-github'
+# gem to store variables
 gem 'figaro'
+#api calls to github
+gem 'httparty'
 
 gem 'acts-as-taggable-on'
 # font awesome

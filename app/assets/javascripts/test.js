@@ -1,0 +1,2 @@
+
+  $("#mytable").addClass('hidden');

@@ -11,6 +11,10 @@ class AppsController < ApplicationController
 
   def show
     @app = App.find(params[:id])
+    @response = HTTParty.get('https://api.github.com/repos/myztajay/'+@app.repo+'/commits')
+    
+
+
 
     # if params[:link_title]
     #   @link=params[:link_title]
@@ -55,6 +59,6 @@ class AppsController < ApplicationController
 
   private
   def app_parameters
-    params.require(:app).permit(:name, :description, :requirements, :developers_needed, :tag_list,:image,:remove_image)
+    params.require(:app).permit(:name, :description, :requirements, :developers_needed, :tag_list,:image,:remove_image, :repo)
   end
 end

@@ -15,8 +15,6 @@ class UsersController < ApplicationController
     redirect_to 'apps_path'
   end
 
-
-
   private
   def user_profile_params
     params.require(:user).permit(:image,:remove_image)
