@@ -13,7 +13,9 @@
 
 <div class="title_container">
   <h1><%= @app.name.capitalize %> </h1><Br>
-   <%= @app.description %>
+  <p class="headline">
+  <%= @app.description%>
+  </p>
 </div>
 <hr>
 <div class="img_container">
@@ -24,12 +26,12 @@
 
 <div class="app_details">
 <div class="panel panel-default">
-  <div class="panel-heading">
+<div class="panel-heading">
     <h1 class="panel-title"><%= link_to @app.name.capitalize, app_path(@app) %> </h1>
-  </div>
+</div>
   <div class="panel-body">
 
-<div class="">
+<div>
   <% if user_signed_in? %>
     <% if @app.user_id === current_user.id %>
       <%= link_to "Edit this App", edit_app_path(@app) %>

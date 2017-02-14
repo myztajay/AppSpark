@@ -10,14 +10,26 @@
 <div class="single_app git_container">
   <h2>GIT HUB HISTORY</h2>
 
-  <%= form_for @app, remote: true do |f| %>
-    <%= f.label :repo%>
+<%if current_user == @app.user and @app.repo? == false %>
+
+ <p>
+   linked your existing repo, if you have one here
+ </p>
+ <div class="tiny_container">
+ <ol>
+   <li> Link your github account <%= link_to "HERE", auth_github_path %></li>
+   <li> Athorize AppSpark</li>
+   <li> Add the name of your Repo below</li>
+   <%= form_for @app, remote: true do |f| %>
+     <%= f.label :repo, "Just The Repo Name"%>
     <%= f.text_field :repo%>
-   <%= f.submit "submit", :class =>"btn btn-primary btn-block" %>
-   <% end %>
+    <%= f.submit "submit", :class =>"btn btn-primary" %>
+    <% end %>
+ </ol>
+  </div>
+<%end%>
 
-  <%= link_to "Link to Github to add Repo", auth_github_path %>
-
+<%if @app.repo? %>
   <table class="table table-hover" id="mytable">
     <thead>
       <tr>
@@ -38,7 +50,13 @@
     <%end%>
   </tbody>
   </table>
+<%end %>
 
+<%if !@app.repo %>
+  <p>
+    user has not posted a repo yet...
+  </p>
+<%end%>
 
 </div>
 
@@ -47,8 +65,5 @@
   <%= render './commitments/commitment_button' %>
 </div>
 
-<div class="single_app comments_container">
-  <h2>COMMENTS</h2>
-</div>
 
 </div>

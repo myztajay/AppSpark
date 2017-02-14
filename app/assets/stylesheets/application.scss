@@ -17,11 +17,35 @@
  @import "bootstrap";
  @import "font-awesome";
  @import url('https://fonts.googleapis.com/css?family=Rubik');
+ @import url('https://fonts.googleapis.com/css?family=Oswald');
+
 
 
  body{
    background-color: #fcfcfc;
    font-family: 'Rubik', sans-serif;
+ }
+ h1, .h1 {
+    font-size: 3em;
+}
+
+ a{
+   color: #FF6600;
+ }
+
+.headline{
+  font-size: 1.5em;
+}
+p{
+color:#545454;
+font-size: 1em;
+}
+ .alt_a{
+   color:#006bb3;
+ }
+
+ .darker_main{
+   background-color: #e65c00;
  }
 
  ul.nav a:hover{
@@ -30,6 +54,13 @@
 
  .panel-title > a:hover{
    color:  #FF6600 !important;
+ }
+
+ .navbar-default .navbar-brand{
+   font-family: 'Oswald', sans-serif;
+   color: #FF6600;
+   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px white;
+   font-size: 48px;
  }
 
  .label-main{
@@ -48,9 +79,28 @@
    flex: 0 1 auto;
    width:350px;
    margin: 10px;
+   min-height: 400px;
+
  }
 
+ .navbar-default {
+    background-color: #393a40;
+    border-color: #393a40;
+
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fcfcfc;
+}
+
+.flex-center{
+  margin: 0 auto;
+}
+
+
+.small-app-detail{
+}
  .mini-app-detail {
+   align-self: flex-end;
    display: flex;
    justify-content: space-around;
    align-items:center;
@@ -122,6 +172,11 @@
  .git_container{
    flex: 1 0 60%;
    text-align: center;
+   justify-content: center;
+ }
+ .tiny_container{
+   width:50%;
+   margin: 0 auto;
  }
  .comments_container{
    flex: 1 0 100%;

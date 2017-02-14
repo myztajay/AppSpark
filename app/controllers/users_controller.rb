@@ -11,6 +11,8 @@ class UsersController < ApplicationController
   end
 
   def github_data
+    x = {github_name: githubname = data["info"]["nickname"]}
+    current_user.update(x)
     puts data
     redirect_to 'apps_path'
   end

@@ -11,8 +11,9 @@ class AppsController < ApplicationController
 
   def show
     @app = App.find(params[:id])
+    if @app.repo?
     @response = HTTParty.get('https://api.github.com/repos/myztajay/'+@app.repo+'/commits')
-    
+    end
 
 
 
