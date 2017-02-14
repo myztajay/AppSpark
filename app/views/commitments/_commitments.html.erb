@@ -1,7 +1,15 @@
 
+  <h2> COMMITMENTS </h2>
+ <% @app.commitments.each do |x| %>
+ <p>
 
+   <% if @app.user.image %>
+   <%=link_to user_path(@app.user) do %>
+     <%= image_tag attachment_url(@app.user, :image, :fill, 50, 50) %>
+   <%end%>
+ <%end%>
 
-<%= form_for Commitment.new, remote: true do |f| %>
- <%= f.submit "Commit" %>
- <%= f.hidden_field :app_id, :value => params[:id]%>
+ <%=link_to x.user.email, user_path(x.user.id)%></p>
  <% end %>
+ <div id="commitment_container">
+ </div>

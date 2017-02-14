@@ -1,5 +1,10 @@
 <div class="creator_container">
-<h4>Created by </h4>
+  <% if @app.user.image %>
+    <%=link_to user_path(@app.user) do %>
+      <%= image_tag attachment_url(@app.user, :image, :fill, 100, 100) %>
+    <%end%>
+  <%end%>
+<h4>By </h4>
 <p>
   <%= link_to @app.user.email, user_path(@app.user.id) %>
 </p>
@@ -9,15 +14,14 @@
   <h1><%= @app.name.capitalize %> </h1><Br>
    <%= @app.description %>
 </div>
-
+<hr>
 <div class="img_container">
   <% if @app.image %>
   <%= image_tag attachment_url(@app, :image, :fill, 700, 380) %>
   <%end%>
 </div>
+
 <div class="app_details">
-
-
 <div class="panel panel-default">
   <div class="panel-heading">
     <h1 class="panel-title"><%= link_to @app.name.capitalize, app_path(@app) %> </h1>
@@ -31,9 +35,6 @@
       <%= link_to "Delete this App", app_path(@app), method: :delete, data: {confirm: "Are you sure?"}%>
     <% end %>
   <%end%>
-  <h4>description</h4><p>
-    <%= @app.description %>
-  </p>
 
   <h4>Requirements </h4><p>
     <%= @app.requirements %>
@@ -53,7 +54,6 @@
     <%end%>
   </p>
 </div>
-
 </div></div></div>
 
 <!-- <div class="mini_nav_container">
