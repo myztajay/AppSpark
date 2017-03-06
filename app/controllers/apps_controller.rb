@@ -12,8 +12,10 @@ class AppsController < ApplicationController
   def show
     @app = App.find(params[:id])
     if @app.repo?
-    @response = HTTParty.get('https://api.github.com/repos/myztajay/'+@app.repo+'/commits')
+    @response = HTTParty.get('https://api.github.com/repos/myztajay/'+@app.repo+'/commits'+ `client_id=#{ENV["GITHUB_ID"]}&client_secret=#{ENV["GITHUB_SECRET"]}`)
     end
+
+
 
 
 

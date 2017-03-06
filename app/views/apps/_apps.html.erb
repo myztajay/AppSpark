@@ -1,6 +1,6 @@
 <% @apps.each do |app| %>
 
-<div class="single_app">
+<div class="single_app pop_up ">
     <% if app.image %>
       <%=link_to app_path(app) do %>
         <%= image_tag attachment_url(app, :image, :fill, 350, 200) %>

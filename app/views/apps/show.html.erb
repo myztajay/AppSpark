@@ -40,6 +40,7 @@
     </thead>
     <tbody>
     <% @response.first(5).each do |x|%>
+
     <tr>
       <td><%= x["commit"]["author"]["date"] %></td>
 
