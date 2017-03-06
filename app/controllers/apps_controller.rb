@@ -15,10 +15,6 @@ class AppsController < ApplicationController
     @response = HTTParty.get('https://api.github.com/repos/myztajay/'+@app.repo+'/commits'+ `client_id=#{ENV["GITHUB_ID"]}&client_secret=#{ENV["GITHUB_SECRET"]}`)
     end
 
-
-
-
-
     # if params[:link_title]
     #   @link=params[:link_title]
     # end
