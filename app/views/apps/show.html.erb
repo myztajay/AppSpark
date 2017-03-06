@@ -1,7 +1,5 @@
 <!-- testing with javascript_includ -->
 
-
-
 <div class="app_show_container">
 <%= render 'app' %>
 <hr>
@@ -9,7 +7,6 @@
 
 <div class="single_app git_container">
   <h2>MOST RECENT COMMITS </h2>
-
 <%if current_user == @app.user and @app.repo? == false %>
 
  <p>
@@ -53,7 +50,7 @@
   </table>
 <%end %>
 
-<%if !@app.repo %>
+<%if @app.repo === "" %>
   <p>
     user has not posted a repo yet...
   </p>
