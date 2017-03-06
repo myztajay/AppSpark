@@ -1,7 +1,7 @@
 
 
-  <div class="single_app flex-center">
-    <div>
+<div class="single_app flex-center">
+  <div>
 <%= form_for @app do |f| %>
 
 <%= f.label :name%><Br>
@@ -25,18 +25,16 @@
 <!-- <%= f.label :image%><br>
 <%= f.attachment_field :image%><br> -->
 
-<% if @app.image %>
+<!-- <% if @app.image %>
 <%= image_tag attachment_url(@app, :image, :fill, 100, 100) %>
-<% end %>
+<% end %> -->
 
 <br>
 <%= f.check_box :remove_image %><br>
 <%= f.label :remove_image %><br>
 
-
-
 <%= f.submit %>
 
 <%end%>
-</div>
+  </div>
 </div>
