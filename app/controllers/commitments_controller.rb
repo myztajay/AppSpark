@@ -1,5 +1,9 @@
 class CommitmentsController < ApplicationController
   def create
+
+    if(!current_user)
+      redirect_to "/users/sign_in"
+    else
     respond_to do |format|
       @commitment = Commitment.new(commitment_parameters)
       @commitment.user = current_user
@@ -13,6 +17,7 @@ class CommitmentsController < ApplicationController
         format.html {}
         format.js {}
       end
+    end
     end
   end
 

@@ -1,4 +1,5 @@
+
 <%= form_for Commitment.new, remote: true do |f| %>
- <%= f.submit "Commit", :class =>"btn btn-primary btn-block" %>
- <%= f.hidden_field :app_id, :value => params[:id]%>
- <% end %>
+<%= f.submit "Commit", :class =>"btn btn-primary btn-block" %>
+<%= f.hidden_field :app_id, :value => params[:id]%>
+<% end %>

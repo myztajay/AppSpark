@@ -7,8 +7,12 @@
 
 <div class="single_app git_container app_bottom">
   <h2>MOST RECENT COMMITS </h2>
-<%if current_user == @app.user and @app.repo? == false %>
 
+<%if @app.repo? == false and current_user != @app.user or !current_user %>
+   <h3>App Creator has not submit a repository</h3>
+<% end %>
+
+<%if current_user == @app.user and @app.repo? == false %>
  <p>
    linked your existing repo, if you have one here
  </p>

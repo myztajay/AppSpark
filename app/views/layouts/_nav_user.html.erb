@@ -14,12 +14,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to 'Home',apps_path %></li>
+        <li><%= link_to 'My Apps',new_app_path %></li>
         <li><%= link_to 'Create an App', new_app_path %></li>
-        <li><%= link_to 'Apps',apps_path %></li>
         <li><%= link_to 'Profile', user_path(current_user)%></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-
                 <%= image_tag attachment_url(current_user, :image, :fill, 25, 25, fallback: "default-nav.jpg") %>
           <i class="fa fa-cog fa-1x" aria-hidden="true"></i></a>
           <ul class="dropdown-menu">
