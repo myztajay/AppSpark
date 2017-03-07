@@ -11,7 +11,7 @@
 <%= f.text_field :requirements%><br>
 
 <%= f.label :developers_needed%><br>
-<%= f.text_field :developers_needed%><br>
+<%= f.select :developers_needed ,options_for_select(0..15)%><br>
 
 <%= f.label :description%><br>
 <%= f.text_field :description%><br>
