@@ -4,7 +4,7 @@
         <h1 class="panel-title">
             <h1><%=@user.email%>'s Profile</h1>
             <% if current_user.image %>
-              <%= image_tag attachment_url(current_user, :image, :fill, 280, 280) %>
+              <%= image_tag attachment_url(current_user, :image, :fill, 280, 280, fallback: "default-profile.jpg") %>
             <%end%>
 
             <%if @user == current_user%>

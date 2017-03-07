@@ -5,7 +5,7 @@
 
    <% if @app.user.image %>
    <%=link_to user_path(@app.user) do %>
-     <%= image_tag attachment_url(@app.user, :image, :fill, 50, 50) %>
+     <%= image_tag attachment_url(@app.user, :image, :fill, 50, 50, fallback: "default-commitments.jpg") %>
    <%end%>
  <%end%>
 
