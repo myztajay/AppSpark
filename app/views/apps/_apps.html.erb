@@ -7,13 +7,20 @@
       <%end%>
     <%end%>
     <br>
-    <strong><%=link_to app.name, app_path(app)%></strong>
+    <strong><%=link_to app.name, app_path(app)%></strong><br>
+
+
+      <%=link_to user_path(app.user) do %>
+        <%= image_tag attachment_url(app.user, :image, :fill, 25, 25, fallback: "default-nav.jpg") %>
+      <%end%>
+
     <p>
       by <%=link_to app.user.email, user_path(app.user), :class => "alt_a" %>
     </p>
+
   <p>
     <%= truncate(app.description , length: 100, omission: '...')%>
-    
+
   </p>
     <div class="small-app-detail">
     <div class="progress">
