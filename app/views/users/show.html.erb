@@ -7,7 +7,7 @@
         </h1>
     </div>
     <div class="panel-body">
-      <%= image_tag attachment_url(current_user, :image, :fill, 280, 280, fallback: "default-profile.jpg") %>
+      <%= image_tag attachment_url(@user, :image, :fill, 280, 280, fallback: "default-profile.jpg") %>
     <%if @user == current_user%>
       <%= form_for current_user do |f| %>
         <%= f.attachment_field :image%>
