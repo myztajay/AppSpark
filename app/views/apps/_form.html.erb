@@ -27,9 +27,9 @@
 <%= f.label :image%><br>
 <%= f.attachment_field :image%><br>
 
-<% if @app.image %>
+
 <%= image_tag attachment_url(@app, :image, :fill, 100, 100) %>
-<% end %>
+
 
 <br>
 <%= f.check_box :remove_image %><br>
