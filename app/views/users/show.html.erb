@@ -2,32 +2,35 @@
   <div class="panel panel-default app_width">
     <div class="panel-heading">
         <h1 class="panel-title">
-            <h1><%=@user.email%>'s Profile</h1>
-            <% if current_user.image %>
-              <%= image_tag attachment_url(current_user, :image, :fill, 280, 280, fallback: "default-profile.jpg") %>
-            <%end%>
+            <h1><%=truncate(@user.email, length: 15, omission: '...')%></h1>
 
-            <%if @user == current_user%>
-              <%= form_for current_user do |f| %>
-                <%= f.label :image%>
-                <%= f.attachment_field :image%>
-                <%= f.check_box :remove_image %>
-                <%= f.label :remove_image %>
-                <%= f.submit %>
-              <%end%>
-            <%end%>
         </h1>
     </div>
     <div class="panel-body">
-        <%= render "./userskills/dropdown" %>
-        <h2>
-            SKILLS
-        </h2>
-        <% current_user.skills.each do |x| %>
-        <h3><%= x.skill%></h3>
-        <% end %>
-        <div id="skills_container"></div>
+      <%= image_tag attachment_url(current_user, :image, :fill, 280, 280, fallback: "default-profile.jpg") %>
+    <%if @user == current_user%>
+      <%= form_for current_user do |f| %>
+        <%= f.attachment_field :image%>
+        <%= f.check_box :remove_image %>
+        <%= f.label :remove_image %>
+        <%= f.submit %>
+      <%end%>
+    <%end%>
     </div>
+</div>
+
+<div class="panel panel-default app_width">
+  <div class="panel-heading">
+      <h1 class="panel-title"></h1>
+        <h1>Skills</h1>
+  </div>
+  <div class="panel-body">
+    <%= render "./userskills/dropdown" %>
+    <% current_user.skills.each do |x| %>
+    <h3><%=x.skill%></h3>
+    <% end %>
+    <div id="skills_container"></div>
+  </div>
 </div>
 
 <div class="panel panel-default app_width">

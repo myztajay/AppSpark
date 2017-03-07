@@ -73,21 +73,29 @@ font-size: 1em;
    color: #FF6600;
  }
 
- .app_container, .new_container{
+ .app_container, .new_container, .user_container{
    display:flex;
    justify-content: space-around;
    align-items: stretch;
    flex-wrap: wrap;
  }
 
+ .user_container{
+   justify-content: center;
+ }
 
-.single_app{
+
+.single_app, .app_bottom{
    border: 1px solid #e6e6e6;
    flex: 0 1 auto;
    width:350px;
    margin: 15px;
    min-height: 400px;
  }
+ .app_bottom{
+   min-height: 0;
+ }
+
 
 .pop_up{
   transition: all .2s ease-in-out;

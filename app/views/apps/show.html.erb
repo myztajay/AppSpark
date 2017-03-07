@@ -5,7 +5,7 @@
 <hr>
 
 
-<div class="single_app git_container">
+<div class="single_app git_container app_bottom">
   <h2>MOST RECENT COMMITS </h2>
 <%if current_user == @app.user and @app.repo? == false %>
 
@@ -58,7 +58,7 @@
 
 </div>
 
-<div class="single_app commiters_container">
+<div class="single_app commiters_container app_bottom">
   <%= render './commitments/commitments' %>
   <%= render './commitments/commitment_button' %>
 </div>

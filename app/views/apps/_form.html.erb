@@ -16,8 +16,10 @@
 <%= f.label :description%><br>
 <%= f.text_field :description%><br>
 
+<% if @app.repo? %>
 <%= f.label :repo%><br>
 <%= f.text_field :repo%><br>
+<% end %>
 
 <%= f.label :tag_list, ("Tags seperated with commas")%><br>
 <%= f.text_field :tag_list%><br>

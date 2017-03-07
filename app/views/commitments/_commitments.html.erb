@@ -3,11 +3,11 @@
  <% @app.commitments.each do |x| %>
  <p>
 
-   <% if @app.user.image %>
+
    <%=link_to user_path(@app.user) do %>
      <%= image_tag attachment_url(@app.user, :image, :fill, 50, 50, fallback: "default-commitments.jpg") %>
    <%end%>
- <%end%>
+
 
  <%=link_to x.user.email, user_path(x.user.id), :class => "alt_a"%></p>
  <% end %>
