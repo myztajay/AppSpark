@@ -24,7 +24,7 @@ A Kick Starter-esc app, to help find developers to work on a project. User proje
 * Jquery
 
 # Install
-1. 'bundle install'
-2.  'rake db:create db:migrate db:seed'
-3.  'rails s'
+1. ``` bundle install```
+2. ```rake db:create db:migrate db:seed```
+3. ```rails s```
 
