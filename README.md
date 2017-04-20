@@ -1,24 +1,27 @@
-# README
+# AppSpark 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Kick Starter-esc app, to help find developers to work on a project. User projects, request developers, enterscope of work, and much more. This project was also a 7 week sprint and uses complex join tables to map relationships, many assorted gem to add functionality, and utilized the github API.
 
-Things you may want to cover:
+# Important Notes
+1. Currently My live in link above is having CDN issues I am working on resolving, they dont affect app performance but photo refuse to load
+2. In order to use the "add a repo" feature and authenticate with github, you need a free developer key from github and need to reference it. in app/config/initializers/omniauth.rb 
 
-* Ruby version
+# Technologies: 
+* Html Css
+* Boostrap
+* Ruby
+* Rails 
+* refile
+* Devise
+* Oauth 
+* Heroku
+* CloudFront CDN
+*  Postgres
+* Javascript
+* Jquery
 
-* System dependencies
+# Install
+1. 'bundle install'
+2.  'rake db:create db:migrate db:seed'
+3.  'rails s'
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
