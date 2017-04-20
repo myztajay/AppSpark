@@ -1,6 +1,8 @@
 # AppSpark 
 Live Demo: [AppSpark Live Link](https://appspark.herokuapp.com/)
 
+![alt text](https://github.com/myztajay/myztajay.github.io/blob/master/images/spark1.png?raw=true "Logo Title Text 1")
+
 A Kick Starter-esc app, to help find developers to work on a project. User projects, request developers, enterscope of work, and much more. This project was also a 7 week sprint and uses complex join tables to map relationships, many assorted gem to add functionality, and utilized the github API.
 
 # Important Notes
