@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
 
-
+#refile stack
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-
+gem 'refile-s3' 
 gem 'refile', github: 'refile/refile', require: 'refile/rails'
 gem 'refile-mini_magick', github: 'refile/refile-mini_magick'
 gem 'sinatra', github: 'sinatra/sinatra', branch: 'master'
