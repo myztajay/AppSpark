@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: sparkApp_production
-  username: sparkApp
-  password: <%= ENV['SPARKAPP_DATABASE_PASSWORD'] %>
+  # username: sparkApp
+  # password: <%= ENV['SPARKAPP_DATABASE_PASSWORD'] %>

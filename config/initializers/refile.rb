@@ -1,5 +1,5 @@
 # Refile.cdn_host = "https://d1toya99ga4u6g.cloudfront.net"
-require "refile/s3"
+# require "refile/s3"
  
 # Refile.cache = Refile::S3.new(prefix: "cache", ENV["AWS"] )
 
