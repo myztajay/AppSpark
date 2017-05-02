@@ -29,6 +29,7 @@
 
 
 <%= image_tag attachment_url(@app, :image, :fill, 100, 100, fallback: "default.jpg") %>
+<%= attachment_image_tag(@app.image , :file, :fill, 450, 450) %>
 
 
 <br>
