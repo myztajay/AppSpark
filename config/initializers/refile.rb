@@ -5,7 +5,7 @@ require "refile/s3"
 AWS = {
   access_key_id: Rails.application.secrets.access_key_id ,
   secret_access_key:  Rails.application.secrets.secret_access_key,
-  region: ENV['AWS_REGION'],
+  region: "us-east-1",
   bucket: Rails.application.secrets.bucket
 }
 
