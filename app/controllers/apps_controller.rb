@@ -6,7 +6,6 @@ class AppsController < ApplicationController
       @apps = App.where('name LIKE ?', "%#{params[:search]}%")
     else
       @apps = App.all.order(created_at: :asc)
-
     end
   end
 

@@ -21,3 +21,8 @@
 
 # Ignore application configuration
 /config/application.yml
+
+#refile
+/config/initializers/refile.rb
+
+/config/secrets.yml
