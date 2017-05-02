@@ -8,9 +8,7 @@ AWS = {
   region: Rails.application.secrets.region,
   bucket: Rails.application.secrets.bucket
 }
- 
-# Refile.cache = Refile::S3.new(prefix: "cache", **ENV['AWS'])
-# Refile.store = Refile::S3.new(prefix: "store", **ENV['AWS'])
+
 
 Refile.cache = Refile::S3.new(prefix: "cache", **AWS)
 Refile.store = Refile::S3.new(prefix: "store", **AWS)
