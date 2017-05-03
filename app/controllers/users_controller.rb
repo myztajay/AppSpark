@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     x = {github_name: githubname = data["info"]["nickname"]}
     current_user.update(x)
     puts data
-    redirect_to 'apps#index'
+    redirect_to '/apps#index'
   end
 
   private
