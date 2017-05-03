@@ -2,42 +2,38 @@
 
 <div class="single_app flex-center">
   <div>
-<%= form_for @app do |f| %>
+    <%= form_for @app do |f| %>
+    
+      <%= f.label :name%><Br>
+      <%= f.text_field :name%><br>
 
-<%= f.label :name%><Br>
-<%= f.text_field :name%><br>
+      <%= f.label :requirements%><br>
+      <%= f.text_field :requirements%><br>
 
-<%= f.label :requirements%><br>
-<%= f.text_field :requirements%><br>
+      <%= f.label :developers_needed%><br>
+      <%= f.select :developers_needed ,options_for_select(1..15)%><br>
 
-<%= f.label :developers_needed%><br>
-<%= f.select :developers_needed ,options_for_select(1..15)%><br>
+      <%= f.label :description%><br>
+      <%= f.text_field :description%><br>
 
-<%= f.label :description%><br>
-<%= f.text_field :description%><br>
+      <% if @app.repo? %>
+        <%= f.label :repo%><br>
+        <%= f.text_field :repo%><br>
+      <% end %>
 
-<% if @app.repo? %>
-<%= f.label :repo%><br>
-<%= f.text_field :repo%><br>
-<% end %>
+      <%= f.label :tag_list, ("Tags seperated with commas")%><br>
+      <%= f.text_field :tag_list%><br>
 
-<%= f.label :tag_list, ("Tags seperated with commas")%><br>
-<%= f.text_field :tag_list%><br>
+      <%= f.label :image%><br>
+      <%= f.attachment_field :image%><br>
 
-<%= f.label :image%><br>
-<%= f.attachment_field :image%><br>
+      <%= image_tag attachment_url(@app, :image, :fill, 100, 100, fallback: "default.jpg") %>
+      <br>
+      <%= f.check_box :remove_image %><br>
+      <%= f.label :remove_image %><br>
 
+      <%= f.submit %>
 
-<%= image_tag attachment_url(@app, :image, :fill, 100, 100, fallback: "default.jpg") %>
-<%= attachment_image_tag(@app.image , :file, :fill, 450, 450) %>
-
-
-<br>
-<%= f.check_box :remove_image %><br>
-<%= f.label :remove_image %><br>
-
-<%= f.submit %>
-
-<%end%>
+    <%end%>
   </div>
 </div>
