@@ -14,12 +14,14 @@
  *= require_self
  */
 
+
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 @import url('https://fonts.googleapis.com/css?family=Oswald');
-
+$primary: #CD5D00 !default;
 body {
     background-color: #fcfcfc;
     font-family: 'Rubik', sans-serif;
