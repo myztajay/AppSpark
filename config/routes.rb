@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  get 'pages/index'
+
   #taging path
   get 'tags/:tag', to: 'apps#index', as: :tag
   #root
-  root 'apps#index'
+  root 'pages#index'
   resources :apps
   resources :userskills, only: [:create, :destroy]
   resources :commitments, only: [:create, :destroy]

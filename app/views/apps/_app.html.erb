@@ -19,9 +19,7 @@
 </div>
 <hr>
 <div class="img_container">
-  <% if @app.image %>
-  <%= image_tag attachment_url(@app, :image, :fill, 700, 380) %>
-  <%end%>
+  <%= image_tag attachment_url(@app, :image, :fill, 700, 380, fallback: "default-app.jpg") %>
 </div>
 
 <div class="app_details">
