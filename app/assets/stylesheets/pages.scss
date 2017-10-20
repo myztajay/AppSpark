@@ -17,7 +17,7 @@
 
 section {
     &.section-primary{
-        @include section-style(#DED4CC)
+        @include section-style(#e6ecf0)
     }
     &.section-alt{
         @include section-style(white)    
@@ -28,6 +28,30 @@ section {
     }
     .faq-content{
         width: 33%;
+    }
+}
+
+.mini-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6ecf0;
+}
+
+.ml-auto{
+    margin-left: auto;
+    margin-right: 40px
+}
+
+footer{
+    
+    background-color: #1a1a1a ;
+    ul{
+        list-style: none;
+        padding: 0;
+        li{
+            color: black;
+        }
     }
 }
 
