@@ -1,3 +1,5 @@
+
 @mixin section-style($color){
+    padding: 50px 0;
     background-color: $color;
 }

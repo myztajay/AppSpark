@@ -14,17 +14,26 @@
  *= require_self
  */
 
-
+$primary: #CD5D00 !default;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 @import url('https://fonts.googleapis.com/css?family=Oswald');
-$primary: #CD5D00 !default;
+
 body {
     background-color: #fcfcfc;
     font-family: 'Rubik', sans-serif;
+}
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.app-image{
+    width: 100%;
 }
 
 h1,
@@ -81,14 +90,7 @@ ul.nav a:hover {
     color: #FF6600;
 }
 
-.app-container,
-.new_container,
-.user_container {
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
-    flex-wrap: wrap;
-}
+
 
 .user_container {
     justify-content: center;
@@ -99,14 +101,7 @@ ul.nav a:hover {
     flex-direction: column;
 }
 
-.single_app,
-.app_bottom {
-    border: 1px solid #e6e6e6;
-    flex: 0 1 auto;
-    width: 350px;
-    margin: 15px;
-    min-height: 400px;
-}
+
 
 .app_bottom {
     min-height: 0;
@@ -261,3 +256,4 @@ hr {
     display: none !important;
     visibility: hidden !important;
 }
+

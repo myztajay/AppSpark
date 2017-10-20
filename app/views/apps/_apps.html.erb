@@ -2,7 +2,7 @@
 
   <div class="single_app pop_up ">
       <%=link_to app_path(app) do %>
-        <%= image_tag attachment_url(app, :image, :fill, 350, 200, fallback: 'default-app-small.jpg') %>
+        <%= image_tag attachment_url(app, :image, :fill, 350, 200, fallback: 'default-app-small.jpg'), :class => "app-image" %>
     <%end%>
     <br>
     <strong><%=link_to app.name, app_path(app)%></strong><br>

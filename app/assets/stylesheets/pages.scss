@@ -1,6 +1,8 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import '_mixins';
+@import '_variables';
 
 .masthead {
     padding: 230px 0;
@@ -14,5 +16,18 @@
 }
 
 section {
-    padding: 15px 0;
+    &.section-primary{
+        @include section-style(#DED4CC)
+    }
+    &.section-alt{
+        @include section-style(white)    
+    }
+    .fa-7x{
+        font-size:8em;
+        color: $primary;
+    }
+    .faq-content{
+        width: 33%;
+    }
 }
+
