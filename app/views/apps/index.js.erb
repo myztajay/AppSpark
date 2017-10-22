@@ -1,0 +1,13 @@
+
+$('#apps').append('<%= j render('./apps/app') %>').hide().fadeIn();
+
+<% if @apps.next_page %>
+  $('.pagination').replaceWith('<%= j will_paginate(@apps) %>');
+<% else %>
+
+    $('#loader').removeClass('loader')
+    $('.pagination').remove();
+
+
+<% end %>
+

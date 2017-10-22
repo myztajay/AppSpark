@@ -4,17 +4,7 @@
         <button class='btn btn-primary'> Get Started</button>
     </div>
 </header>
-<div class='container mini-header'>
-    <h1>Most Popular</h1>
-    <button class='ml-auto'> See All</button>
-</div>
 
-
-<section class='section-primary'>
-    <div class='container app-container'>
-        <%= render './apps/apps' %>
-    </div>
-</section>
 <section class='section-alt'>
     <div class='container app-container'>
         <div class='faq-content text-center'><i class="fa fa-user-circle-o fa-7x" aria-hidden="true"></i><h1> Step 1</h1><H3 class='text-muted'>Create you app and post it on app spark.</H3></div>
@@ -22,6 +12,27 @@
         <div class='faq-content text-center'><i class="fa fa-globe fa-7x" aria-hidden="true"></i><p><h1>Step 3</h1><h3 class='text-muted'> Release your app and change the world.</h3></p></div>
     </div>
 </section>
+
+<section class='section-primary'>
+  <div class='container mini-header'>
+    <h1>Most Popular</h1>
+    <button class='ml-auto'> See All</button>
+  </div>
+  <div class='container app-container'>
+    <%= render './apps/pop_apps' %>
+  </div>
+  <div class='container mini-header'>
+  <h1>Newest</h1>
+    <button class='ml-auto'> See All</button>
+  </div>
+  <div class='container app-container'  id='apps'>
+    <%= render './apps/apps' %>
+    
+  </div>
+  <div id='loader'></div>
+
+</section>
+
 
   <footer class="s24-bar text-color-white">
 
@@ -57,7 +68,6 @@
               Copyrights © All Rights Reserved by <a class="s24-link s24-link--effect-alpha" href="#">Company</a>
             </p>
           </div>
-
           <div class="col-sm-3 text-xs-left text-sm-right">
             <p>end</p>
           </div>

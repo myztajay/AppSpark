@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def index
-    @apps = App.last(9)
+    @apps = App.first(6)
+    @pop_apps = App.first(3)
   end
 end

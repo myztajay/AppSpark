@@ -19,7 +19,9 @@ gem 'omniauth-github'
 gem 'figaro'
 #api calls to github
 gem 'httparty'
-
+# pagination
+gem 'will_paginate', '~> 3.1.0'
+# tags
 gem 'acts-as-taggable-on'
 # font awesome
 gem "font-awesome-rails"
