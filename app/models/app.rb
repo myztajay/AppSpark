@@ -1,6 +1,6 @@
 class App < ApplicationRecord
   belongs_to :user
-  has_many :commitments
+  has_many :commitments, :dependent => :destroy
   acts_as_taggable
   attachment :image
   before_save :downcase_fields
