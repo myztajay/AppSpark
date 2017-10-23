@@ -23,6 +23,7 @@
     justify-content: center;
     flex-wrap: wrap;
     align-items: baseline;
+    margin-bottom: 20px;
     .commiters-container{
         flex: 0 0 30%;
         @include section-style(white);

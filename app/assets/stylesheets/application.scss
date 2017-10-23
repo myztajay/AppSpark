@@ -32,12 +32,25 @@ body {
   box-sizing: border-box;
 }
 
-
-footer{
-    margin-top: 20px;
-}
 .app-image{
     width: 100%;
+}
+
+.login-signup-container{
+    height: 100vh;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/signin.jpeg') no-repeat center center;
+    background-size: cover;
+}
+
+.form-container{
+    min-width: 20%;
+    padding: 15px;
+    background-color: white;
+    
 }
 
 h1,
