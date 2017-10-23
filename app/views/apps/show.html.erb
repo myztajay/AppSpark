@@ -1,11 +1,11 @@
 <!-- testing with javascript_includ -->
 
-<div class="app_show_container top_margin">
+<div class="app-show-container container top-margin">
 <%= render 'app' %>
 <hr>
 
 
-<div class="single_app git_container app_bottom">
+<div class="git-container">
   <h2>MOST RECENT COMMITS </h2>
 
 <%if @app.repo? == false and current_user != @app.user or !current_user %>
@@ -19,7 +19,7 @@
  <div class="tiny_container">
  <ol>
    <li> Link your github account <%= link_to "HERE", auth_github_path %></li>
-   <li> Athorize AppSpark</li>
+   <li> Authorize AppSpark</li>
    <li> Add the name of your Repo below</li>
    <%= form_for @app, remote: true do |f| %>
      <%= f.label :repo, "Just The Repo Name"%>
@@ -62,10 +62,12 @@
 
 </div>
 
-<div class="single_app commiters_container app_bottom">
+
+<div class=" commiters-container container">
   <%= render './commitments/commitments' %>
   <%= render './commitments/commitment_button' %>
 </div>
 
 
 </div>
+<%= render './layouts/footer'%>

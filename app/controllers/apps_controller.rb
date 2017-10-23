@@ -5,7 +5,7 @@ class AppsController < ApplicationController
     elsif params[:search]
       @apps = App.where('name LIKE ?', "%#{params[:search]}%")
     else
-       @apps = App.paginate(:page => params[:page], :per_page => 6)
+       @apps = App.paginate(:page => params[:page], :per_page => 15)
     end
   end
 

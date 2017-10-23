@@ -3,3 +3,8 @@
     padding: 50px 0;
     background-color: $color;
 }
+
+@mixin general-container(){
+    display: flex;
+    flex-wrap: wrap;
+}

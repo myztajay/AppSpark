@@ -1,22 +1,47 @@
 // Place all the styles related to the apps controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-
-
+@import '_mixins';
+@import '_variables';
 
 .app-container {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 56px;
+    .single_app {
+        border: 1px solid #e6e6e6;
+        flex: 0 1 auto;
+        width: 31%;
+        margin: 10px;
+        min-height: 426px;
+        background-color: white;
+    }
 }
 
-.single_app {
-    border: 1px solid #e6e6e6;
-    flex: 0 1 auto;
-    width: 31%;
-    margin: 10px;
-    min-height: 426px;
-    background-color: white;
+.app-show-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: baseline;
+    .commiters-container{
+        flex: 0 0 30%;
+        @include section-style(white);
+        padding: 15px;
+        align-self: flex-start;
+    }
+    .git-container{
+        flex: 0 0 63%;
+        text-align: center;
+        justify-content: center;
+        @include section-style(white);
+        padding: 15px;
+        min-height: 176px;
+    }
+}
+
+
+.match-img{
+    min-height: 380px;
 }
 
 

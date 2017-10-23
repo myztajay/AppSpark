@@ -32,6 +32,10 @@ body {
   box-sizing: border-box;
 }
 
+
+footer{
+    margin-top: 20px;
+}
 .app-image{
     width: 100%;
 }
@@ -92,9 +96,7 @@ ul.nav a:hover {
 
 
 
-.user_container {
-    justify-content: center;
-}
+
 
 .edit_container {
     display: flex;
@@ -167,16 +169,6 @@ hr {
     width: 75%;
 }
 
-.top_margin {
-    margin-top: 60px;
-}
-
-.app_show_container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: baseline;
-}
 
 .creator_container {
     flex: 0 0 15%;
@@ -219,11 +211,6 @@ hr {
     flex: 1 0 30%;
 }
 
-.git_container {
-    flex: 1 0 60%;
-    text-align: center;
-    justify-content: center;
-}
 
 .tiny_container {
     width: 50%;

@@ -1,15 +1,19 @@
 
-  <h2> COMMITMENTS </h2>
+ <h2> COMMITMENTS </h2>
+
+<% if @app.commitments.length === 0 %>
+    <p>No one has commited to this app. Be the first to put a ring on it.</p>
+   
+<% else %>
  <% @app.commitments.each do |x| %>
- <p>
-
-
-   <%=link_to user_path(@app.user) do %>
-     <%= image_tag attachment_url(x.user, :image, :fill, 50, 50, fallback: "default-commitments.jpg") %>
-   <%end%>
-
-
- <%=link_to x.user.email, user_path(x.user.id), :class => "alt_a"%></p>
- <% end %>
+        <p>
+            <%=link_to user_path(@app.user) do %>
+            <%= image_tag attachment_url(x.user, :image, :fill, 50, 50, fallback: "default-commitments.jpg") %>
+            <%end%>
+            <%=link_to x.user.email, user_path(x.user.id), :class => "alt_a"%>
+         </p>
+    <% end %>    
+<% end %>
+ 
  <div id="commitment_container">
  </div>
