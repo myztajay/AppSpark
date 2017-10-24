@@ -1,9 +1,9 @@
 class AppsController < ApplicationController
   def index
     if params[:tag]
-      @apps = App.tagged_with(params[:tag])
+      @apps = App.tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 15)
     elsif params[:search]
-      @apps = App.where('name LIKE ?', "%#{params[:search]}%")
+      @apps = App.where('name LIKE ?', "%#{params[:search]}%").paginate(:page => params[:page], :per_page => 15)
     else
        @apps = App.paginate(:page => params[:page], :per_page => 15)
     end

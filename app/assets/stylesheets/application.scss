@@ -146,6 +146,17 @@ ul.nav a:hover {
 }
 
 
+.btn-primary{
+    background-color: desaturate($primary, 10%);
+    color:white;
+    border: 0;
+}
+
+.btn-primary:hover{
+    background-color:  #FF6600;
+}
+
+
 
 .edit_container {
     display: flex;
