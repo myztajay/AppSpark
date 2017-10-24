@@ -28,7 +28,7 @@
     <% if current_user === @user %>
       <%= render "./userskills/dropdown" %>
     <% end %>
-    <% current_user.skills.each do |x| %>
+    <% @user.skills.each do |x| %>
     <h3><%=x.skill%></h3>
     <% end %>
     <div id="skills_container"></div>
