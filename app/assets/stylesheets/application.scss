@@ -14,7 +14,7 @@
  *= require_self
  */
 
-$primary: #CD5D00 !default;
+$primary: #FF6600 !default;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -46,11 +46,14 @@ body {
     background-size: cover;
 }
 
+.icon-img{
+    width: 50px;
+}
+
 .form-container{
     min-width: 20%;
     padding: 15px;
     background-color: white;
-    
 }
 
 h1,
@@ -83,8 +86,16 @@ p {
     color: #006bb3;
 }
 
+
+
 ul.nav a:hover {
-    color: #FF6600 !important;
+    color: $primary !important;
+    border-bottom: 2px solid $primary;
+    -webkit-transition: color 1s;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s;
+    -o-transition: color 1s;
+    transition: color 0.2s;
 }
 
 .panel-title>a:hover {
@@ -95,7 +106,8 @@ ul.nav a:hover {
     font-family: 'Oswald', sans-serif;
     color: #FF6600;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px white;
-    font-size: 48px;
+    font-size: 41px;
+    line-height: 12px;
 }
 
 .label-main {
@@ -107,7 +119,31 @@ ul.nav a:hover {
     color: #FF6600;
 }
 
-
+.navbar-right{
+    li{
+        .create-btn{
+            margin: 5px 9px;
+            background-color: desaturate(#FF6600, 10%);
+            color: white !important;
+            height: 38px;
+            line-height: 8px;
+            border: 0;
+        }
+        a{
+            &.create-btn:hover{
+                background-color: #FF6600;
+                border: 0;
+                color: white !important;
+            }  
+        }
+        
+    }
+    .profile-nav-img{
+        a{
+            padding: 6px 0px;;
+        }
+    }
+}
 
 
 
@@ -117,6 +153,10 @@ ul.nav a:hover {
 }
 
 
+.navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 13px;
+}
 
 .app_bottom {
     min-height: 0;
@@ -136,13 +176,13 @@ ul.nav a:hover {
 }
 
 .navbar-default {
-    background-color: #393a40;
-    border-color: #393a40;
+    background-color: white;
     margin-bottom: 5px;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.17);
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: #fcfcfc;
+    color: #5E5E5E;
 }
 
 .self-center {
@@ -271,3 +311,28 @@ hr {
     100% { transform: rotate(360deg); }
 }
 
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: rgb(255, 102, 0);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 0, 0.6);
+  outline: 0 none;
+}
+
+.circle-circle{
+    border-radius:50% ;
+}
