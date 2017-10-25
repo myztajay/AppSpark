@@ -46,6 +46,15 @@ body {
     background-size: cover;
 }
 
+.general-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/signin.jpeg') no-repeat center center;
+    background-size: cover;
+}
+
 .icon-img{
     width: 50px;
 }

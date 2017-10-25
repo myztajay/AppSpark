@@ -1,5 +1,11 @@
 
 <div class="app-container top_margin container">
-    <%= render 'apps' %><br>
-    <%= will_paginate @apps %>
+    <% if @apps.length < 1 %>
+            <div class='self-centered'>
+                <h3> Derp! No results found.</h3>
+            </div>
+    <%else %>
+        <%= render 'apps' %><br>
+        <%= will_paginate @apps %>
+    <% end %>
 </div>
