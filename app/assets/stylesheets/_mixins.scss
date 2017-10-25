@@ -8,3 +8,7 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+@mixin nav-margin(){
+    margin-top: 56px;
+}

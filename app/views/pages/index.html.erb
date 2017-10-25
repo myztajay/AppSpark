@@ -16,17 +16,17 @@
 
 <section class='section-primary'>
   <div class='container mini-header'>
-    <h1>Most Popular</h1>
+    <h3>Most Popular</h3>
     <%= link_to "See More", apps_path , class: 'ml-auto btn btn-primary create-button' %>
   </div>
-  <div class='container app-container'>
+  <div class='container app-container no-top-margin'>
     <%= render './apps/pop_apps' %>
   </div>
   <div class='container mini-header'>
-  <h1>Newest</h1>
+  <h3>Newest</h3>
     <%= link_to "See More", apps_path , class: 'ml-auto btn btn-primary create-button' %>
   </div>
-  <div class='container app-container'  id='apps'>
+  <div class='container app-container no-top-margin'  id='apps'>
     <%= render './apps/apps' %>
     
   </div>
