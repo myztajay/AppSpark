@@ -55,6 +55,18 @@
     background-color: lightsalmon;
 }
 
+.new-app-container{
+    @include general-container;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-field{
+    flex: 0 0 33%;
+    padding: 8px;
+}
+
 
 
  @media only screen and (min-width : 10px) {
