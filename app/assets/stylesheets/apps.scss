@@ -9,8 +9,6 @@
     margin-top: 56px;
     .single_app {
         border: 1px solid #e6e6e6;
-        flex: 0 1 auto;
-        margin: 10px;
         min-height: 426px;
         background-color: white;
     }
@@ -23,17 +21,14 @@
     align-items: baseline;
     margin-bottom: 20px;
     .commiters-container{
-        flex: 0 0 30%;
-        @include section-style(white);
+        background-color: white;
         padding: 15px;
         align-self: flex-start;
     }
     .git-container{
-        flex: 0 0 63%;
         text-align: center;
         justify-content: center;
-        @include section-style(white);
-        padding: 15px;
+        background-color: white;
         min-height: 176px;
     }
 }
@@ -73,19 +68,45 @@
 
  @media only screen and (min-width : 10px) {
     .single_app{
-        width: 100%;
+        flex: 1 1 auto;
+        margin: 15px 0;
     }
     .container{
         width: 100%;
     }
+    .git-container{
+        flex: 1 0 60%;
+        margin: 10px 0;
+    }
+    .commiters-container{
+        flex: 1 0 30%;
+        margin: 10px 0;
+    }
+     .new-app-container{
+        margin-top: 83px;
+    }
+   
 }
 
  @media only screen and (min-width : 768px) {
     .single_app{
-        width: 47%;
+        flex: 1 1 auto;
+        margin: 10px;
     }
     .container{
         width: 100%;
+    }
+    .tiny_container {
+    width: 50%;
+    margin: 0 auto;
+    }
+    .git-container{
+        flex: 0 0 60%;
+        margin: 10px;
+    }
+    .commiters-container{
+        flex: 0 0 30%;
+        margin: 10px;
     }
 }
 

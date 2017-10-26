@@ -102,6 +102,9 @@ ul.nav a:hover {
     color: #FF6600 !important;
 }
 
+.panel {
+    margin-bottom: 0;
+    }
 .navbar-default .navbar-brand {
     font-family: 'Oswald', sans-serif;
     color: #FF6600;
@@ -296,19 +299,18 @@ hr {
 }
 
 .img_container {
-    flex: 1 0 60%;
+    flex: 0 0 60%;
     margin: 10px;
 }
 
 .img_container>img {
     max-width: 100%;
-    margin: 10px;
+    
 }
 
 .app_details {
     align-self: flex-start;
-    flex: 1 0 30%;
-    margin: 10px;
+    
 }
 
 .mini_nav_container {
@@ -340,9 +342,7 @@ hr {
     text-align: center;
 }
 
-.panel {
-    margin: 10px;
-}
+
 
 .app_width {
     max-width: 321px;
@@ -390,9 +390,21 @@ input[type="color"]:focus,
   outline: 0 none;
 }
 
+
+
+.dropdown-menu {
+    padding: 5px 0 0 0;
+}
+
+.dropdown-menu .divider {
+    margin: 0;
+}
+
 .circle-circle{
     border-radius:50% ;
 }
+
+
 
  @media only screen and (min-width : 10px) {
     .form-inline {
@@ -401,6 +413,32 @@ input[type="color"]:focus,
     .form-text-fields{
         flex: 1 0 100%;
     }
+    .img_container {
+    flex: 1 0 60%;
+    margin-left: 0;
+    margin-right: 0;
+    }
+    .new-app-container{
+        margin-top: 83px;
+    }
+    .app_details {
+    flex: 1 0 30%;
+    margin-left: 0;
+    margin-right: 0;
+    }
+    .img_container>img {
+    max-width: 100%;
+    }
+    .tiny_container {
+    width: 100%;
+    margin: 0 auto;
+    }
+    .navbar-right .profile-nav-img a {
+    margin: 10px;
+    }
+
+
+
 }
 
  @media only screen and (min-width : 768px) {
@@ -409,6 +447,24 @@ input[type="color"]:focus,
     }
     .form-text-fields{
         flex: 0 0 45%;   
+    }
+    .img_container {
+        flex: 0 0 60%;
+        margin: 10px;
+    }
+    .img_container>img {
+        max-width: 100%;
+    }
+    .tiny_container {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .app_details {
+        flex: 0 0 30%;
+        margin: 10px;
+    }
+    .navbar-right .profile-nav-img a {
+        margin: 0;
     }
 }
 
