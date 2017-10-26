@@ -13,3 +13,23 @@
     margin-top: 65px;
 }
 
+
+.profile-container{
+    @include general-container;
+    @include nav-margin;
+    
+}
+
+.profile-photo-container{
+    @include general-container;
+    flex-drection: column;
+    flex: 0 0 15%;
+    background-color: white;
+    img{
+        width: 100%;
+        height: auto;
+    }
+    input{
+        width: 125px;
+    }
+}

@@ -5,14 +5,18 @@
 @import '_variables';
 
 .masthead {
-    padding: 230px 0;
+    margin-top: 52px;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/landing.jpg') no-repeat center center;
     background-size: cover;
-    height: 65vh;
-   
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section {
+    display:flex;
+    justify-content: center;
     &.section-primary{
         @include section-style(#e6ecf0);
     }
@@ -21,8 +25,8 @@ section {
         @include general-container();
     }
     .fa-7x{
-        font-size:8em;
-        color: $primary;
+        font-size:7em;
+        color: desaturate($primary, 10%);
     }
 }
 

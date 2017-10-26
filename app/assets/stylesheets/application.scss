@@ -43,8 +43,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/signin.jpeg') no-repeat center center;
-    background-size: cover;
 }
 
 
@@ -108,7 +106,7 @@ ul.nav a:hover {
     font-family: 'Oswald', sans-serif;
     color: #FF6600;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px white;
-    font-size: 41px;
+    font-size: 32px;
     line-height: 12px;
 }
 
@@ -119,6 +117,12 @@ ul.nav a:hover {
 .yellow {
     background-color: #fff176;
     color: #FF6600;
+}
+
+.mini-brand{
+    position: absolute;
+    margin-left: 98px;
+    margin-top: 33px;
 }
 
 .navbar-right{
@@ -180,7 +184,8 @@ ul.nav a:hover {
         margin: 5px; 
     }
     .btn{
-        flex: 0 0 97%;
+        flex: 1 1 100%;
+        margin: 10px;
     }
     img{
         border: 1px solid black; 

@@ -9,18 +9,13 @@
         <span class="icon-bar"></span>
       </button>
       <%= link_to 'AppSpark', pages_index_path, class: "navbar-brand" %>
-   
-      <%= link_to apps_path do %>
-      <!--<%= image_tag("/icon.png", :class => 'icon-img') %>-->
-      <% end %>
-     
+      <p class='mini-brand'>Alpha</p>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Create an App', new_app_path %></li>
-        <li><%= link_to 'Create an App', new_app_path %></li>
+        <li><%= link_to 'Apps', apps_path %></li>
         <li class="dropdown profile-nav-img">
           <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 <%= image_tag attachment_url(current_user, :image, :fill, 37, 37, fallback: "default-nav.jpg"), class: 'circle-circle' %>
@@ -33,7 +28,7 @@
           </ul>
         </li>
         <li>
-          <%= link_to 'Create App',apps_path, class: "btn btn-primary create-btn rounded-circle" %>
+          <%= link_to 'Create App', new_app_path, class: "btn btn-primary create-btn rounded-circle" %>
         </li>
 
       </ul>
