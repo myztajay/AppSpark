@@ -15,3 +15,8 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+
+ var ping = setInterval(function() {
+    fetch("https://appspark.herokuapp.com");
+}, 300000); // every 5 minutes (300000)
