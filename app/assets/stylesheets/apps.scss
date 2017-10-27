@@ -55,7 +55,7 @@
     @include general-container;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 94vh;
 }
 
 .form-field{
@@ -109,6 +109,10 @@
         flex: 0 0 30%;
         margin: 10px;
     }
+    .new-app-container{
+        margin-top: 50px;
+    }
+        
 }
 
 
