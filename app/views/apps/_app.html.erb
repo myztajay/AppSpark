@@ -1,4 +1,10 @@
-
+  <% @amount = @app.commitments.count*100/@app.developers_needed*100/100 %>
+  <% if @app.commitments.count*100/@app.developers_needed*100/100 > 100 %>
+      <% @bar = 100 %>
+    <% else %>
+      <% @bar = @app.commitments.count*100/@app.developers_needed*100/100%>
+   <% end %>
+   
 <div class="creator_container">
 
     <%=link_to user_path(@app.user) do %>
@@ -14,7 +20,7 @@
 <div class="title_container">
   <h1><%= @app.name.capitalize %> </h1><Br>
   <p class="headline">
-  <%= @app.description%>
+  <%= @app.description %>
   </p>
 </div>
 <hr>
@@ -44,10 +50,17 @@
   <h4>Developers Needed</h4><p>
      <%=@app.name.capitalize%> has <%=@app.commitments.count%> and needs <%=@app.developers_needed %>
     <div class="progress">
-    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: <%= @app.commitments.count*100/@app.developers_needed*100/100%>%">
-      <%= @app.commitments.count*100/@app.developers_needed*100/100%>%
-      <span class="sr-only">40% Complete (success)</span>
-    </div>
+       <%if @amount > 100%>
+          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: <%=@bar%>%">
+          <%= @amount %>%
+          <span class="sr-only">40% Complete (success)</span>
+          </div>
+        <% else %>
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: <%=@bar%>%">
+          <%= @amount %>%
+          <span class="sr-only">40% Complete (success)</span>
+          </div>
+        <% end %>
   </div>
   <h4>Tags</h4>
     <%@app.tag_list.each do |x| %>

@@ -362,6 +362,12 @@ hr {
     height: 120px;
     animation: spin 2s linear infinite;
 }
+.pagination {
+    align-self: center;
+    flex: 0 0 100%;
+    text-align: center;
+    
+}
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
@@ -418,9 +424,7 @@ input[type="color"]:focus,
     margin-left: 0;
     margin-right: 0;
     }
-    .new-app-container{
-        margin-top: 83px;
-    }
+   
     .app_details {
     flex: 1 0 30%;
     margin-left: 0;

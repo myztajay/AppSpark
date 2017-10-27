@@ -6,6 +6,6 @@
             </div>
     <%else %>
         <%= render 'apps' %><br>
-        <%= will_paginate @apps %>
+        <div class ="pagination"><%= will_paginate @apps %></div>
     <% end %>
 </div>
