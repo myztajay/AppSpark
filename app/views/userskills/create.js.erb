@@ -1,5 +1,9 @@
 $(function(){
+ if($('#<%=@skill%>').length > 0){
+  alert('<%=@userskill.user.email%> already has this skill')
+ } else {
 
   $("#skills_container").append(
-    "<h3><%=@skill%></h3>")
+    "<h3 id='<%=@skill%>'><%=@skill%></h3>")
+    }
 })
