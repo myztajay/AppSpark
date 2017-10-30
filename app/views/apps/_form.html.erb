@@ -5,16 +5,16 @@
     <%= form_for @app, :html => {:class => "form-inline"} do |f| %>
       <div class=" new-form ">
           <div class='form-text-fields'>
-          <%= f.text_field :name, placeholder: "Name", class: 'form-field' %><br>
-          <%= f.text_field :requirements, placeholder: "Requirements", class: 'form-field'%><br>
-          <%= f.text_field :description, placeholder: "Description", class: 'form-field'%><br>
+          <%= f.text_field :name, placeholder: "Name", class: 'form-field', :required => true %><br>
+          <%= f.text_field :requirements, placeholder: "Requirements", class: 'form-field', :required => true%><br>
+          <%= f.text_field :description, placeholder: "Description", class: 'form-field', :required => true%><br>
     
           <% if @app.repo? %>
             <%= f.label :repo%><br>
             <%= f.text_field :repo%><br>
           <% end %>
     
-          <%= f.text_field :tag_list, placeholder: "Tags seperated with commas", class: 'form-field' %><br>
+          <%= f.text_field :tag_list, placeholder: "Tags seperated with commas", class: 'form-field', :required => true %><br>
           <div class='dev-needed'>
           <%= f.label :developers_needed%><br>
           <%= f.select :developers_needed ,options_for_select(1..15) %><br>

@@ -165,6 +165,24 @@ ul.nav a:hover {
     background-color:  $primary;
 }
 
+.btn-primary:focus, .btn-primary.focus {
+    color: #fff;
+    background-color: saturate($primary, 15%);
+    border-color: #122b40;
+}
+
+.btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: saturate($primary, 15%);
+    border-color: $primary;
+}
+
+.btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus, .btn-primary.active:hover, .btn-primary.active:focus, .btn-primary.active.focus, .open > .btn-primary.dropdown-toggle:hover, .open > .btn-primary.dropdown-toggle:focus, .open > .btn-primary.dropdown-toggle.focus {
+    color: #fff;
+    background-color: saturate($primary, 15%);
+    border-color: #122b40;
+}
+
 .new-form{
     background-color: white;
     width: 100%;
