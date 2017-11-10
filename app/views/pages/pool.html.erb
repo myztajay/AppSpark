@@ -1,0 +1,20 @@
+<div class="app-container container">
+    <% @users.each do |user| %>
+       <div class ="single-user"> 
+            <%=link_to user_path(user) do %>
+              <%= image_tag attachment_url(user, :image, :fill, 200, 200, fallback: "default-profile.jpg") %>
+            <%end%>
+            <h5><%= user.email %></h5>
+            <p>
+                <%= truncate( " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque venenatis elit et magna imperdiet 
+            feugiat. Aliquam a egestas lorem, id semper arcu. Maecenas rhoncus at nulla eu semper. Cras ornare egestas 
+            finibus. Nullam semper facilisis lorem. Cras ante ipsum, tempor eget bibendum vel, semper eu turpis. Nullam 
+            rutrum magna nulla, at dapibus est condimentum eget. Duis mollis nulla eu tortor dignissim efficitur. 
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas molestie
+            imperdiet mauris quis suscipit. Integer a nibh eget enim fringilla varius." , length: 100, omission: '...')%>
+            </p>
+            <i class="devicon-java-plain colored big-icon"></i>
+       </div>
+       
+    <% end %>
+</div>

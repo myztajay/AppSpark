@@ -33,3 +33,45 @@
         width: 125px;
     }
 }
+
+
+.app-container {
+    @include general-container;
+    margin-top: 56px;
+    justify-content: center;
+    .single-user {
+        border: 1px solid #e6e6e6;
+        min-height: 426px;
+        background-color: white;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.big-icon{
+    font-size: 30px;
+}
+
+ @media only screen and (min-width : 10px) {
+    .single-user{
+        flex: 1 1 auto;
+        margin: 15px 0;
+    }
+}
+
+ @media only screen and (min-width : 768px) {
+    .single-user{
+        flex: 0 0 auto;
+        margin: 10px;
+    }
+}
+
+
+@media only screen and (min-width : 992px) {
+    .single-user{
+        width: 20%;
+    }
+   
+}
+
