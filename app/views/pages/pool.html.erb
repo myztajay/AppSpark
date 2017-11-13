@@ -13,7 +13,14 @@
             Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas molestie
             imperdiet mauris quis suscipit. Integer a nibh eget enim fringilla varius." , length: 100, omission: '...')%>
             </p>
-            <i class="devicon-java-plain colored big-icon"></i>
+            <div>
+    
+                <% user.skills.first(5).each do |skill| %>
+                    <i class="devicon-<%= skill.skill.downcase%>-plain colored big-icon"></i>
+                <% end %> 
+      
+            </div>
+            
        </div>
        
     <% end %>

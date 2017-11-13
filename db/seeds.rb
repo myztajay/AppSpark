@@ -11,16 +11,16 @@ Skill.destroy_all
 User.destroy_all
 App.destroy_all
 
-Skill.create(skill: "Javascript")
-Skill.create(skill: "Ruby")
-Skill.create(skill: "Python")
-Skill.create(skill: "Java")
-Skill.create(skill: "C++")
-Skill.create(skill: "Assembly")
-Skill.create(skill: "Ember")
-Skill.create(skill: "Angularjs")
+Skill.create(skill: "javascript")
+Skill.create(skill: "ruby")
+Skill.create(skill: "python")
+Skill.create(skill: "java")
+Skill.create(skill: "cplusplus")
+Skill.create(skill: "d3js")
+Skill.create(skill: "swift")
+Skill.create(skill: "angularjs")
 Skill.create(skill: "Nodejs")
-Skill.create(skill: "Reactjs")
+Skill.create(skill: "react")
 
 User.create(email: "rafael@gmail.com", password: "topsecret", password_confirmation: "topsecret")
 User.create(email: "scott@gmail.com", password: "topsecret", password_confirmation: "topsecret")
