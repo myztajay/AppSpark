@@ -13,12 +13,15 @@ This project was a 7 day sprint as part of a project for a General Assembly cour
 3. setup a  amazon bucket at https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html
 4. setup your envirionmental variables. Refile(image processing) is currently set to store in an AWS bucket for example. 
 
+```
 AWS = {
   access_key_id: ENV["AWS_ID"] ,
   secret_access_key: ENV["AWS_KEY"] ,
   region: "us-east-1",
   bucket: "appspark"
 }
+```
+
 Just make sure that your name your variables AWS_ID and AWS_KEY
 
 5. In your console run ```bundle install``` to install gems/packages
@@ -28,6 +31,13 @@ Just make sure that your name your variables AWS_ID and AWS_KEY
 
 # Notes
 1. In order to use the "add a repo" feature and authenticate with github, you need a free developer key from github and need to reference it. in app/config/initializers/omniauth.rb 
+getting a key is easy, just goto https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/ and follow the instructions and just like above example with AWS just add the appropriate  environemntaal variables. 
+```
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :github, ENV["GITHUB_ID"], ENV["GITHUB_SECRET"] #, scope: "user:email,user:follow"
+  
+end
+```
 
 
 # Technologies: 
