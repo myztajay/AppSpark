@@ -1,5 +1,5 @@
 # AppSpark 
-#Live Demo: [AppSpark Live Link](https://appspark.herokuapp.com/)
+# Live Demo: [AppSpark Live Link](https://appspark.herokuapp.com/)
 
 ![alt text](http://www.rafaelfernandez.me/img/appspark.png "Logo Title Text 1")
 
